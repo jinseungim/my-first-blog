@@ -1,0 +1,832 @@
+bash: web/bin/activate: No such file or directory
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ top
+top - 16:17:14 up 3 days,  3:14,  2 users,  load average: 0.01, 0.02, 0.00
+Tasks: 112 total,   1 running, 110 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.1 us,  1.1 sy,  0.0 ni, 97.6 id,  0.0 wa,  0.2 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   112192 free,   280172 used,   624160 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   514340 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 S  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                 
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                  
+   19 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0                 
+   20 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd                       top - 16:17:17 up 3 days,  3:14,  2 users,  load average: 0.01, 0.02, 0.00
+Tasks: 112 total,   2 running, 109 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.3 us,  2.0 sy,  0.0 ni, 96.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   112068 free,   280280 used,   624176 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   514216 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+28872 jinseun+  20   0  473072  35684   9696 S  3.0  3.5   0:09.89 python                     
+28981 jinseun+  20   0  156508   4040   3580 R  0.3  0.4   0:00.01 top                        
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 R  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                 
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                  top - 16:17:20 up 3 days,  3:14,  2 users,  load average: 0.01, 0.02, 0.00
+Tasks: 112 total,   2 running, 109 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  2.0 us,  1.7 sy,  0.0 ni, 96.0 id,  0.0 wa,  0.3 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   111944 free,   280416 used,   624164 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   514092 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+28872 jinseun+  20   0  473072  35684   9696 S  3.3  3.5   0:09.99 python                     
+ 2930 jinseun+  20   0  155548   4724   3416 S  0.3  0.5   0:04.53 sshd                       
+27948 root      20   0       0      0      0 S  0.3  0.0   0:03.50 kworker/0:0                
+28931 jinseun+  20   0  544484  52948  28744 S  0.3  5.2   0:00.93 emacs                      
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 R  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      top - 16:17:23 up 3 days,  3:14,  2 users,  load average: 0.01, 0.02, 0.00
+Tasks: 112 total,   2 running, 109 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.7 us,  1.0 sy,  0.0 ni, 97.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   111944 free,   280404 used,   624176 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   514092 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+28872 jinseun+  20   0  473072  35684   9696 S  1.7  3.5   0:10.04 python                     
+28931 jinseun+  20   0  544536  52948  28744 S  1.3  5.2   0:00.97 emacs                      
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 R  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                 
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                  top - 16:17:26 up 3 days,  3:14,  2 users,  load average: 0.01, 0.02, 0.00
+Tasks: 112 total,   2 running, 109 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.3 us,  1.3 sy,  0.0 ni, 97.0 id,  0.0 wa,  0.3 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   111944 free,   280416 used,   624164 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   514092 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+28872 jinseun+  20   0  473072  35684   9696 S  1.7  3.5   0:10.09 python                     
+28931 jinseun+  20   0  544536  52948  28744 S  0.3  5.2   0:00.98 emacs                      
+28981 jinseun+  20   0  156508   4040   3580 R  0.3  0.4   0:00.02 top                        
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 R  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                 q
+
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ kill 28872
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ top
+top - 16:17:37 up 3 days,  3:14,  2 users,  load average: 0.01, 0.02, 0.00
+Tasks: 110 total,   1 running, 108 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.1 us,  1.1 sy,  0.0 ni, 97.6 id,  0.0 wa,  0.2 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   162088 free,   230332 used,   624104 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   564236 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+28982 jinseun+  20   0  156508   4020   3564 R  6.2  0.4   0:00.01 top                        
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 S  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                 
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                  
+   19 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0                 top - 16:17:40 up 3 days,  3:14,  2 users,  load average: 0.00, 0.02, 0.00
+Tasks: 110 total,   2 running, 107 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.3 sy,  0.0 ni, 99.0 id,  0.0 wa,  0.3 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   162088 free,   230332 used,   624104 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   564236 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+28931 jinseun+  20   0  544536  52948  28744 S  0.7  5.2   0:01.18 emacs                      
+27948 root      20   0       0      0      0 S  0.3  0.0   0:03.51 kworker/0:0                
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 R  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                 
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                  top - 16:17:43 up 3 days,  3:14,  2 users,  load average: 0.00, 0.02, 0.00
+Tasks: 110 total,   2 running, 107 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.0 us,  0.3 sy,  0.0 ni, 98.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   162088 free,   230316 used,   624120 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   564236 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                    
+28931 jinseun+  20   0  544536  52948  28744 S  0.7  5.2   0:01.20 emacs                      
+    1 root      20   0  149300   9916   7552 S  0.0  1.0   0:14.35 systemd                    
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                   
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0                
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.14 rcu_sched                  
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                     
+    9 root      20   0       0      0      0 R  0.0  0.0   0:01.27 rcuos/0                    
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                    
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain              
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.34 watchdog/0                 
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                    
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                  
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                      
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                 
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                  
+   19 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0                 q
+
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ 
+(web) [jinseungim@localhost mysite]$ ls
+__init__.py  __pycache__  settings.py  urls.py	wsgi.py
+(web) [jinseungim@localhost mysite]$ cd ..
+(web) [jinseungim@localhost djangogirl]$ ls
+'#db.sqlite3#'	blog  db.sqlite3  manage.py  mysite
+(web) [jinseungim@localhost djangogirl]$ python manage.py runserver 0:8000
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:18:02
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+  C-c C-c^C(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ python manage.py runserver 0:8000 &
+python manage.py runserver 0:8000 &
+[1] 28992
+(web) [jinseungim@localhost djangogirl]$ Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:18:19
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+
+
+(web) [jinseungim@localhost djangogirl]$ [20/Mar/2017 16:18:22]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:21:23]"GET /blog/ HTTP/1.1" 404 2094
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:24:03
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:24:06]"GET /blog/ HTTP/1.1" 500 80225
+[20/Mar/2017 16:24:27]"GET /blog/ HTTP/1.1" 404 2094
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:25:15
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:25:17]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:22]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:23]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:24]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:24]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:24]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:24]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:25]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:25]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:25]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:26]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:26]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:26]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:26]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:26]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:27]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:27]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:27]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:27]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:28]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:28]"GET /blog/ HTTP/1.1" 404 2094
+[20/Mar/2017 16:25:33]"GET / HTTP/1.1" 404 2079
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:25:40
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:25:45]"GET / HTTP/1.1" 404 2079
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:25:52
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:25:53]"GET / HTTP/1.1" 500 80170
+[20/Mar/2017 16:26:20]"GET / HTTP/1.1" 404 2079
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:28:27
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:28:41]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:43]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:44]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:44]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:44]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:44]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:45]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:45]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:45]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:45]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:45]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:45]"GET / HTTP/1.1" 404 2079
+[20/Mar/2017 16:28:46]"GET / HTTP/1.1" 404 2079
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:29:12
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:29:14]"GET / HTTP/1.1" 404 2079
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:30:31
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:30:54]"GET / HTTP/1.1" 404 2014
+[20/Mar/2017 16:31:03]"GET /blog/ HTTP/1.1" 404 2100
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:31:29
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:31:31]"GET /blog/ HTTP/1.1" 200 36
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:31:49
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:31:53]"GET / HTTP/1.1" 200 36
+[20/Mar/2017 16:31:57]"GET / HTTP/1.1" 200 36
+[20/Mar/2017 16:35:21]"GET / HTTP/1.1" 200 36
+[20/Mar/2017 16:35:23]"GET / HTTP/1.1" 200 36
+[20/Mar/2017 16:35:23]"GET / HTTP/1.1" 200 36
+[20/Mar/2017 16:35:23]"GET / HTTP/1.1" 200 36
+[20/Mar/2017 16:35:23]"GET / HTTP/1.1" 200 36
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:35:55
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+[20/Mar/2017 16:36:29]"GET / HTTP/1.1" 500 88609
+
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ ls
+ls
+'#db.sqlite3#'	blog  db.sqlite3  manage.py  mysite
+(web) [jinseungim@localhost djangogirl]$ cd blog
+cd blog
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'  __pycache__  migrations	tests.py  urls.py~
+__init__.py    admin.py     models.py	urls.py   views.py
+(web) [jinseungim@localhost blog]$ mkdir templates
+mkdir templates
+(web) [jinseungim@localhost blog]$ cd templates
+cd templates
+(web) [jinseungim@localhost templates]$ mkdir blog
+mkdir blog
+(web) [jinseungim@localhost templates]$ cd blog
+cd blog
+(web) [jinseungim@localhost blog]$ [20/Mar/2017 16:38:01]"GET / HTTP/1.1" 500 85131
+
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ top
+top
+top - 16:39:29 up 3 days,  3:36,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 113 total,   1 running, 111 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.1 us,  1.1 sy,  0.0 ni, 97.6 id,  0.0 wa,  0.2 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   109624 free,   282624 used,   624276 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   511852 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                   
+    1 root      20   0  149300   9928   7552 S  0.0  1.0   0:14.41 systemd                   
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                  
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0               
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.15 rcu_sched                 
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                    
+    9 root      20   0       0      0      0 S  0.0  0.0   0:01.29 rcuos/0                   
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                   
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0               
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain             
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.35 watchdog/0                
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                   
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                 
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                     
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                 
+   19 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0                
+   20 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd                      
+   21 root      39  19       0      0      0 S  0.0  0.0   0:00.00 khugepaged                
+   22 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 crypto                    
+   23 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd               
+   24 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset                    
+   25 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kblockd                   
+   26 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 ata_sff                   
+   27 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 md                        
+   28 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 devfreq_wq                
+   29 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 watchdogd                 
+   32 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kswapd0                   
+   33 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 vmstat                    
+   79 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kthrotld                  
+   80 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 acpi_thermal_pm           
+   81 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_0                 
+   82 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_0                
+   83 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_1                 
+   84 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_1                
+   85 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_2                 
+   86 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_2                
+   89 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kpsmoused                 
+   90 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 dm_bufio_cache            
+   91 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 ipv6_addrconf             top - 16:39:32 up 3 days,  3:36,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 113 total,   1 running, 111 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.7 us,  1.7 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.3 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   109624 free,   282628 used,   624272 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   511852 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                   
+29204 jinseun+  20   0  473052  36212   9788 S  2.3  3.6   0:06.22 python                    
+28931 jinseun+  20   0  546140  54776  28732 S  0.7  5.4   0:04.12 emacs                     
+ 2930 jinseun+  20   0  155548   4724   3416 S  0.3  0.5   0:04.81 sshd                      
+25815 root      20   0       0      0      0 S  0.3  0.0   0:00.19 kworker/u2:1              
+    1 root      20   0  149300   9928   7552 S  0.0  1.0   0:14.41 systemd                   
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                  
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0               
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.15 rcu_sched                 
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                    
+    9 root      20   0       0      0      0 S  0.0  0.0   0:01.29 rcuos/0                   
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                   
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0               
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain             
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.35 watchdog/0                
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                   
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                 
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                     
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                 
+   19 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0                
+   20 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd                      
+   21 root      39  19       0      0      0 S  0.0  0.0   0:00.00 khugepaged                
+   22 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 crypto                    
+   23 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd               
+   24 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset                    
+   25 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kblockd                   
+   26 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 ata_sff                   
+   27 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 md                        
+   28 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 devfreq_wq                
+   29 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 watchdogd                 
+   32 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kswapd0                   
+   33 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 vmstat                    
+   79 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kthrotld                  
+   80 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 acpi_thermal_pm           
+   81 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_0                 
+   82 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_0                
+   83 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_1                 
+   84 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_1                
+   85 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_2                 top - 16:39:35 up 3 days,  3:36,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 113 total,   1 running, 111 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  1.3 us,  1.3 sy,  0.0 ni, 97.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1016524 total,   109624 free,   282612 used,   624288 buff/cache
+KiB Swap:  2297852 total,  2296840 free,     1012 used.   511852 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                   
+29204 jinseun+  20   0  473052  36212   9788 S  2.7  3.6   0:06.30 python                    
+ 1225 root      20   0  267676  11124   8424 S  0.3  1.1   0:11.59 httpd                     
+28931 jinseun+  20   0  546140  54776  28732 S  0.3  5.4   0:04.13 emacs                     
+    1 root      20   0  149300   9928   7552 S  0.0  1.0   0:14.41 systemd                   
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kthreadd                  
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.71 ksoftirqd/0               
+    7 root      20   0       0      0      0 S  0.0  0.0   0:01.15 rcu_sched                 
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                    
+    9 root      20   0       0      0      0 S  0.0  0.0   0:01.29 rcuos/0                   
+   10 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcuob/0                   
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0               
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 lru-add-drain             
+   13 root      rt   0       0      0      0 S  0.0  0.0   0:00.35 watchdog/0                
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0                   
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                 
+   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                     
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper                
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                 
+   19 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0                
+   20 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd                      
+   21 root      39  19       0      0      0 S  0.0  0.0   0:00.00 khugepaged                
+   22 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 crypto                    
+   23 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd               
+   24 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset                    
+   25 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kblockd                   
+   26 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 ata_sff                   
+   27 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 md                        
+   28 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 devfreq_wq                
+   29 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 watchdogd                 
+   32 root      20   0       0      0      0 S  0.0  0.0   0:00.04 kswapd0                   
+   33 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 vmstat                    
+   79 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kthrotld                  
+   80 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 acpi_thermal_pm           
+   81 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_0                 
+   82 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_0                
+   83 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_1                 
+   84 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_1                
+   85 root      20   0       0      0      0 S  0.0  0.0   0:00.00 scsi_eh_2                 
+   86 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 scsi_tmf_2                q
+
+(web) [jinseungim@localhost blog]$ kill 29204
+kill 29204
+(web) [jinseungim@localhost blog]$ 
+
+[1]+  Terminated              python manage.py runserver 0:8000  (wd: ~/djangogirl)
+(wd now: ~/djangogirl/blog/templates/blog)
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ python manage.py runserver 0:8000 &
+python manage.py runserver 0:8000 &
+[1] 29248
+(web) [jinseungim@localhost blog]$ python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+
+[1]+  Exit 2                  python manage.py runserver 0:8000
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ cd ..
+cd ..
+(web) [jinseungim@localhost templates]$ ls
+ls
+blog
+(web) [jinseungim@localhost templates]$ cd ..
+cd ..
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'  __pycache__  migrations	post_list.html	tests.py  urls.py~
+__init__.py    admin.py     models.py	templates	urls.py   views.py
+(web) [jinseungim@localhost blog]$ cd ..
+cd ..
+(web) [jinseungim@localhost djangogirl]$ python manage.py runserver 0:8000 &
+python manage.py runserver 0:8000 &
+[1] 29252
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ Performing system checks...
+
+System check identified no issues (0 silenced).
+March 20, 2017 - 16:40:16
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+
+
+(web) [jinseungim@localhost djangogirl]$ [20/Mar/2017 16:40:20]"GET / HTTP/1.1" 500 88790
+
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ ls
+ls
+'#db.sqlite3#'	blog  db.sqlite3  manage.py  mysite
+(web) [jinseungim@localhost djangogirl]$ cd blog
+cd blog
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'  __pycache__  migrations	post_list.html	tests.py  urls.py~
+__init__.py    admin.py     models.py	templates	urls.py   views.py
+(web) [jinseungim@localhost blog]$ mv templates ../templates
+mv templates ../templates
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'  __pycache__  migrations	post_list.html	urls.py   views.py
+__init__.py    admin.py     models.py	tests.py	urls.py~
+(web) [jinseungim@localhost blog]$ mv post_list.html ../templates/post_list.html
+mv post_list.html ../templates/post_list.html
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'  __pycache__  migrations	tests.py  urls.py~
+__init__.py    admin.py     models.py	urls.py   views.py
+(web) [jinseungim@localhost blog]$ cd ..
+cd ..
+(web) [jinseungim@localhost djangogirl]$ ls
+ls
+'#db.sqlite3#'	blog  db.sqlite3  manage.py  mysite  templates
+(web) [jinseungim@localhost djangogirl]$ cd templates
+cd templates
+(web) [jinseungim@localhost templates]$ ls
+ls
+blog  post_list.html
+(web) [jinseungim@localhost templates]$ mv post_list.html blog/post_list.html
+mv post_list.html blog/post_list.html
+(web) [jinseungim@localhost templates]$ ls
+ls
+blog
+(web) [jinseungim@localhost templates]$ cd blog
+cd blog
+(web) [jinseungim@localhost blog]$ ls
+ls
+post_list.html
+(web) [jinseungim@localhost blog]$ [20/Mar/2017 16:41:37]"GET / HTTP/1.1" 500 88790
+
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ mv --help
+mv --help
+Usage: mv [OPTION]... [-T] SOURCE DEST
+  or:  mv [OPTION]... SOURCE... DIRECTORY
+  or:  mv [OPTION]... -t DIRECTORY SOURCE...
+Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+  -f, --force                  do not prompt before overwriting
+  -i, --interactive            prompt before overwrite
+  -n, --no-clobber             do not overwrite an existing file
+If you specify more than one of -i, -f, -n, only the final one takes effect.
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  move all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 move only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -Z, --context                set SELinux security context of destination
+                                 file to default type
+      --help     이 도움말을 표시하고 끝냅니다
+      --version  버전 정보를 출력하고 끝냅니다
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Report mv translation bugs to <http://translationproject.org/team/>
+Full documentation at: <http://www.gnu.org/software/coreutils/mv>
+or available locally via: info '(coreutils) mv invocation'
+(web) [jinseungim@localhost blog]$ ls
+ls
+post_list.html
+(web) [jinseungim@localhost blog]$ cd ..
+cd ..
+(web) [jinseungim@localhost templates]$ cd ..
+cd ..
+(web) [jinseungim@localhost djangogirl]$ ls
+ls
+'#db.sqlite3#'	blog  db.sqlite3  manage.py  mysite  templates
+(web) [jinseungim@localhost djangogirl]$ mv -r templates blog/templates
+mv -r templates blog/templates
+mv: invalid option -- 'r'
+Try 'mv --help' for more information.
+(web) [jinseungim@localhost djangogirl]$ mv -r templates blog/templates
+mv -r templates blog/templates
+mv: invalid option -- 'r'
+Try 'mv --help' for more information.
+(web) [jinseungim@localhost djangogirl]$ mv templates blog/templates
+mv templates blog/templates
+(web) [jinseungim@localhost djangogirl]$ ls
+ls
+'#db.sqlite3#'	blog  db.sqlite3  manage.py  mysite
+(web) [jinseungim@localhost djangogirl]$ cd blog
+cd blog
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'	    __init__.py  admin.py    models.py	tests.py  urls.py~
+'#post_list.html#'  __pycache__  migrations  templates	urls.py   views.py
+(web) [jinseungim@localhost blog]$tree
+tree
+.
+├── #models.py#
+├── #post_list.html#
+├── __init__.py
+├── __pycache__
+│   ├── __init__.cpython-35.pyc
+│   ├── admin.cpython-35.pyc
+│   ├── models.cpython-35.pyc
+│   ├── urls.cpython-35.pyc
+│   └── views.cpython-35.pyc
+├── admin.py
+├── migrations
+│   ├── 0001_initial.py
+│   ├── __init__.py
+│   └── __pycache__
+│       ├── 0001_initial.cpython-35.pyc
+│       └── __init__.cpython-35.pyc
+├── models.py
+├── templates
+│   └── blog
+│       └── post_list.html
+├── tests.py
+├── urls.py
+├── urls.py~
+└── views.py
+
+5 directories, 19 files
+(web) [jinseungim@localhost blog]$ [20/Mar/2017 16:46:31]"GET / HTTP/1.1" 200 0
+pwd
+pwd
+/home/jinseungim/djangogirl/blog
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'	    __init__.py  admin.py    models.py	tests.py  urls.py~
+'#post_list.html#'  __pycache__  migrations  templates	urls.py   views.py
+(web) [jinseungim@localhost blog]$ [20/Mar/2017 16:47:21]"GET / HTTP/1.1" 200 0
+[20/Mar/2017 16:47:24]"GET / HTTP/1.1" 200 0
+
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ [20/Mar/2017 16:47:34]"GET / HTTP/1.1" 200 0
+
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#models.py#'  __init__.py  admin.py	models.py	templates  urls.py   views.py
+'*shell*'      __pycache__  migrations	post_list.html	tests.py   urls.py~
+(web) [jinseungim@localhost blog]$ mv post_list.html templates/blog/post_list.html
+mv post_list.html templates/blog/post_list.html
+(web) [jinseungim@localhost blog]$ [20/Mar/2017 16:48:02]"GET / HTTP/1.1" 200 53
+[20/Mar/2017 16:49:39]"GET / HTTP/1.1" 200 116
+[20/Mar/2017 16:53:38]"GET / HTTP/1.1" 200 451
+
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ 
+
+(web) [jinseungim@localhost blog]$ ls
+ls
+'#*shell*#'    '*shell*'    __pycache__  migrations  templates	urls.py   views.py
+'#models.py#'  __init__.py  admin.py	 models.py   tests.py	urls.py~
+(web) [jinseungim@localhost blog]$ ls -a
+ls -a
+'#*shell*#'    .	    ..		 admin.py    templates	urls.py~
+'#models.py#'  '.#*shell*'  __init__.py  migrations  tests.py	views.py
+'*shell*'      .#models.py  __pycache__  models.py   urls.py
+(web) [jinseungim@localhost blog]$ pwd
+pwd
+/home/jinseungim/djangogirl/blog
+(web) [jinseungim@localhost blog]$ cd ..
+cd ..
+(web) [jinseungim@localhost djangogirl]$ pwd
+pwd
+/home/jinseungim/djangogirl
+(web) [jinseungim@localhost djangogirl]$ ls -a
+ls -a
+'#db.sqlite3#'	.  .#db.sqlite3  ..  .git  .gitignore  blog  db.sqlite3  manage.py  mysite
+(web) [jinseungim@localhost djangogirl]$ git stauts
+git stauts
+git: 'stauts'은(는) 깃 명령이 아닙니다. 'git --help'를 참고하십시오.
+
+다음을 의도하신 것 아니었나요?
+	status
+(web) [jinseungim@localhost djangogirl]$ git status
+git status
+현재 브랜치 master
+브랜치가 'origin/master'에 맞게 업데이트된 상태입니다.
+커밋하도록 정하지 않은 변경 사항:
+  (무엇을 커밋할지 바꾸려면 "git add/rm <파일>..."을 사용하십시오)
+  (작업 폴더의 변경 사항을 버리려면 "git checkout -- <파일>..."을 사용하십시오)
+
+	삭제함:        blog/admin.py~
+	삭제함:        blog/models.py~
+	수정함:        blog/views.py
+	삭제함:        mysite/settings.py~
+	수정함:        mysite/urls.py
+
+추적하지 않는 파일:
+  (커밋할 사항에 포함하려면 "git add <파일>..."을 사용하십시오)
+
+	#db.sqlite3#
+	.#db.sqlite3
+	blog/#*shell*#
+	blog/#models.py#
+	blog/*shell*
+	blog/.#*shell*
+	blog/.#models.py
+	blog/templates/
+	blog/urls.py
+	blog/urls.py~
+
+커밋할 변경 사항을 추가하지 않았습니다 ("git add" 및/또는 "git commit -a"를
+사용하십시오)
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ 
+
+(web) [jinseungim@localhost djangogirl]$ git a
